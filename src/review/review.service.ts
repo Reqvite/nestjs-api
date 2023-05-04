@@ -20,9 +20,11 @@ export class ReviewService {
   }
 
   async findByProductId(productId: string): Promise<Review[]> {
-    return this.reviewModel
-      .find({ productId: new Types.ObjectId(productId) })
-      .exec();
+    return this.reviewModel.find({ productId }).exec();
+  }
+
+  async findAllReviews(): Promise<Review[]> {
+    return this.reviewModel.find({}).exec();
   }
 
   async deleteByProductId(productId: string) {
