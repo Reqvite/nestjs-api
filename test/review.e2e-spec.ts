@@ -16,9 +16,9 @@ const loginDto: AuthDto = {
 
 const testDto: CreateReviewDto = {
   _id: new Types.ObjectId(),
-  name: 'Тест',
-  title: 'Заголовок',
-  description: 'Описание тестовое',
+  name: 'test',
+  title: 'title',
+  description: 'description',
   rating: 5,
   productId,
 };

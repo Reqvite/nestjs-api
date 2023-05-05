@@ -7,12 +7,8 @@ import {
   ArrayNotEmpty,
 } from 'class-validator';
 
-export enum TopLevelCategory {
-  Cousres,
-  Services,
-  Books,
-  Products,
-}
+export type TopLevelCategory = 'courses' | 'services' | 'books' | 'products';
+
 class Hh {
   @IsNumber()
   count: number;
@@ -31,7 +27,7 @@ class Advantages {
   description: string;
 }
 
-export class TopPageDto {
+export class CreateTopPageDto {
   @IsString()
   firstCategory: TopLevelCategory;
 

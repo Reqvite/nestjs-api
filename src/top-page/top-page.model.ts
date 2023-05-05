@@ -1,11 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-export enum TopLevelCategory {
-  Cousres,
-  Services,
-  Books,
-  Products,
-}
+import { TopLevelCategory } from './dto/create-topPage.dto';
 
 export type ProductDocument = HydratedDocument<TopPage>;
 class Hh {
